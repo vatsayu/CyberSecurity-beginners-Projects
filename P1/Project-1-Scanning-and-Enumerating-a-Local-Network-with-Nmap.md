@@ -31,6 +31,7 @@ nmap 192.168.1.0/24
 ```
 Expected Output: A list of devices on your network, their IP addresses, and the open ports.
 
+<img width="1920" height="997" alt="Screenshot_2025-08-22_12_40_41" src="https://github.com/user-attachments/assets/480dcd93-ed45-412c-a08c-55aa4bcbcebd" />
 
 
 ### Task 2: Scanning for Specific Ports
@@ -40,12 +41,17 @@ nmap -p 80 192.168.1.0/24
 ```
 Expected Output: A list of devices with port 80 open.
 
+<img width="1920" height="997" alt="Screenshot_2025-08-22_12_42_46" src="https://github.com/user-attachments/assets/4056189c-f055-485d-8a4f-05e096b65780" />
+
 ### Task 3: Service Version Detection
 Step 1: Use the -sV option to detect the version of services running on open ports:
 ```sh
 nmap -sV 192.168.1.0/24
 ```
 Expected Output: A detailed list of open ports and the services running on them, including version information.
+
+<img width="1920" height="997" alt="Screenshot_2025-08-22_12_51_58" src="https://github.com/user-attachments/assets/e71de110-b795-4cdf-b849-240434b766f5" />
+
 
 ### Task 4: Operating System Detection
 Step 1: Use the -O option to detect the operating systems of devices on the network:
@@ -54,6 +60,9 @@ sudo nmap -O 192.168.1.0/24
 ```
 Expected Output: The operating system details of the devices on the network.
 
+<img width="1920" height="997" alt="Screenshot_2025-08-22_12_53_44" src="https://github.com/user-attachments/assets/460a2db5-e0f2-4a77-b3e0-18063eca746e" />
+
+
 ### Task 5: Aggressive Scan
 Step 1: Perform an aggressive scan using the -A option, which includes OS detection, version detection, script scanning, and traceroute:
 ```sh
@@ -61,13 +70,14 @@ sudo nmap -A 192.168.1.0/24
 ```
 Expected Output: Comprehensive information about the devices on the network, including open ports, services, versions, operating systems, and traceroute details.
 
+
+<img width="1920" height="997" alt="Screenshot_2025-08-22_12_57_31" src="https://github.com/user-attachments/assets/527267c8-e3c1-486b-bbc1-3ee1a2177d10" />
+
 ## Additional Resources
 Nmap Official Documentation
 Nmap Cheat Sheet
-Online Nmap Course on Udemy
 
-
-This project will give you a solid foundation in using Nmap for network scanning and enumeration, essential skills for any ethical hacker.
+This project will give you a solid foundation in using Nmap for network scanning and enumeration.
 
 
 
