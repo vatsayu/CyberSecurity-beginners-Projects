@@ -1,4 +1,4 @@
-# Project 1: Scanning and Enumerating a Local Network with Nmap on Kali Linux
+# Project 1: Scanning and Enumerating a Local Network with Nmap
 
 ## Introduction
 In this project, you will learn how to use Nmap, a powerful network scanning tool, to discover devices and services running on a local network. Network scanning and enumeration are critical skills for ethical hackers, as they help in identifying potential targets and vulnerabilities within a network. By the end of this project, you will be able to perform basic network scans, identify open ports, and gather information about the devices on your network using Kali Linux.
@@ -31,6 +31,8 @@ nmap 192.168.1.0/24
 ```
 Expected Output: A list of devices on your network, their IP addresses, and the open ports.
 
+<img width="1920" height="997" alt="Screenshot_2025-08-22_12_40_41" src="https://github.com/user-attachments/assets/b58e5078-3799-4e1c-8bef-bc74cc9eaa3c" />
+
 
 
 ### Task 2: Scanning for Specific Ports
@@ -39,6 +41,8 @@ Step 1: To scan for specific ports (e.g., HTTP port 80), use the -p option:
 nmap -p 80 192.168.1.0/24
 ```
 Expected Output: A list of devices with port 80 open.
+<img width="1920" height="997" alt="Screenshot_2025-08-22_12_42_46" src="https://github.com/user-attachments/assets/468eeb45-3359-4df2-99c8-073778b56dac" />
+
 
 ### Task 3: Service Version Detection
 Step 1: Use the -sV option to detect the version of services running on open ports:
@@ -46,6 +50,8 @@ Step 1: Use the -sV option to detect the version of services running on open por
 nmap -sV 192.168.1.0/24
 ```
 Expected Output: A detailed list of open ports and the services running on them, including version information.
+<img width="1920" height="997" alt="Screenshot_2025-08-22_12_51_58" src="https://github.com/user-attachments/assets/37d1de4e-c995-480d-b8b6-3246e50898a2" />
+
 
 ### Task 4: Operating System Detection
 Step 1: Use the -O option to detect the operating systems of devices on the network:
@@ -54,6 +60,10 @@ sudo nmap -O 192.168.1.0/24
 ```
 Expected Output: The operating system details of the devices on the network.
 
+<img width="1920" height="997" alt="Screenshot_2025-08-22_12_53_44" src="https://github.com/user-attachments/assets/4121d2a6-e4aa-4dec-be91-cfc3243cc931" />
+
+
+
 ### Task 5: Aggressive Scan
 Step 1: Perform an aggressive scan using the -A option, which includes OS detection, version detection, script scanning, and traceroute:
 ```sh
@@ -61,14 +71,13 @@ sudo nmap -A 192.168.1.0/24
 ```
 Expected Output: Comprehensive information about the devices on the network, including open ports, services, versions, operating systems, and traceroute details.
 
+<img width="1920" height="997" alt="Screenshot_2025-08-22_12_57_31" src="https://github.com/user-attachments/assets/ce62f681-0691-4cba-883f-94900a71c602" />
+
+
 ## Additional Resources
 Nmap Official Documentation
 Nmap Cheat Sheet
-Online Nmap Course on Udemy
 
 
-This project will give you a solid foundation in using Nmap for network scanning and enumeration, essential skills for any ethical hacker.
-
-
-
+This project will give you a solid foundation in using Nmap for network scanning and enumeration.
 
