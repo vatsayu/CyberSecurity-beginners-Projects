@@ -14,11 +14,11 @@ All projects are written in **Python** and are intended **strictly for education
 | P2 | Typo Game (Bash)              | Bash-based typing speed & accuracy game (useful for awareness training)     | Completed | `P2/Typo-Game/`                            |
 | P3 | File Type Identifier          | GUI tool to detect real file types using magic numbers (ignores extensions) | Completed | `File-Type-Identifier-GUI/`                |
 | P4 | Phishing Awareness Simulator  | Interactive GUI trainer to recognize phishing vs legitimate emails          | Completed | `-Phishing-Awareness-Simulator/`           |
-| P5 | Network Device Scanner        | (planned) Local network discovery tool                                      | Completed | —                                          |
-| P6 | Password Policy Analyzer      | (planned) Strength & compliance checker                                     | Completed | —                                          |
-| P7 | Secure File Share System      | (planned) Basic encrypted file transfer simulation                          | Completed | —                                          |
-| P8 | Intrusion Detection System (IDS) | (planned) Simple network traffic monitor                                 | Planned   | —                                          |
-| P9 | Web App Vulnerability Scanner | (planned) Basic scanner for common web vulnerabilities                      | Planned   | —                                          |
+| P5 | Network Device Scanner        |   Local network discovery tool                                              | Completed | —                                          |
+| P6 | Password Policy Analyzer      |  Strength & compliance checker                                              | Completed | —                                          |
+| P7 | Secure File Share System      |  Basic encrypted file transfer simulation                                   | Completed | —                                          |
+| P8 | Intrusion Detection System (IDS) |  Simple network traffic monitor                                          | Completed | —                                          |
+| P9 | Web App Vulnerability Scanner |  Basic scanner for common web vulnerabilities                               | Completed | —                                          |
 
 ## Project Details
 
