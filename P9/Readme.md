@@ -1,70 +1,37 @@
-from flask import Flask, render_template, request
-import requests
-from urllib.parse import urlparse
-import socket
-from bs4 import BeautifulSoup
-import re
+#  – Web Vulnerability Scanner (Web App)
 
-app = Flask(__name__)
+A simple, educational web-based vulnerability scanner built with **Flask** and styled with a modern **black neon / cyberpunk** theme.  
+Scans URLs for common vulnerabilities such as reflective XSS, basic SQL injection errors, and open ports.
 
-def scan_xss(url):
-    """Basic reflective XSS test"""
-    payloads = ["<script>alert('XSS')</script>", "'><img src=x onerror=alert('XSS')>"]
-    results = []
-    for payload in payloads:
-        test_url = f"{url}?q={payload}" if '?' in url else f"{url}?test={payload}"
-        try:
-            r = requests.get(test_url, timeout=5)
-            if payload in r.text:
-                results.append(f"Potential XSS vulnerability detected with payload: {payload}")
-        except:
-            pass
-    return results if results else ["No XSS detected in basic test."]
+**Important Ethical & Legal Note**  
+This tool is **strictly for learning and testing your own websites** or sites you have **explicit written permission** to scan.  
+Unauthorized scanning of any website is illegal in most jurisdictions. Use responsibly.
 
-def scan_sqli(url):
-    """Basic error-based SQLi test"""
-    payloads = ["' OR 1=1 --", '" OR 1=1 --', "' ; DROP TABLE users --"]
-    results = []
-    for payload in payloads:
-        test_url = f"{url}?id={payload}" if '?' in url else f"{url}?id={payload}"
-        try:
-            r = requests.get(test_url, timeout=5)
-            if re.search(r"(sql|syntax|error|database|mysql|sqlite|postgresql)", r.text.lower()):
-                results.append(f"Potential SQL Injection detected with payload: {payload}")
-        except:
-            pass
-    return results if results else ["No SQLi detected in basic test."]
+## Features
 
-def scan_ports(url):
-    """Basic open ports check (top 10 common)"""
-    host = urlparse(url).hostname
-    ports = [80, 443, 22, 21, 25, 53, 110, 143, 3306, 5432]
-    open_ports = []
-    for port in ports:
-        try:
-            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.settimeout(1)
-            s.connect((host, port))
-            open_ports.append(port)
-            s.close()
-        except:
-            pass
-    return open_ports if open_ports else "No open ports detected in basic scan."
+- Clean, dark neon-themed dashboard (black background + glowing green accents)
+- Input form to scan any URL
+- Basic vulnerability checks:
+  - Reflective XSS (payload injection & reflection detection)
+  - Error-based SQL Injection (common error patterns in response)
+  - Open ports scan (top common ports: 80, 443, 22, 21, etc.)
+- Real-time results display with categorized sections
+- Responsive design (mobile-friendly)
+- Deployable on Vercel (free & serverless)
 
-@app.route("/", methods=["GET", "POST"])
-def index():
-    results = {}
-    if request.method == "POST":
-        url = request.form.get("url").strip()
-        if not url:
-            results["error"] = "Please enter a URL."
-        else:
-            results["url"] = url
-            results["xss"] = scan_xss(url)
-            results["sqli"] = scan_sqli(url)
-            results["ports"] = scan_ports(url)
+## Screenshots
 
-    return render_template("index.html", results=results)
+<img width="1919" height="1113" alt="Screenshot 2026-02-13 225854" src="https://github.com/user-attachments/assets/9a5dc3a0-cb46-49a6-88f3-35e0740f9f19" />
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
+## Tech Stack
+
+- **Backend**: Flask (Python)
+- **Frontend**: HTML + Tailwind CSS + custom neon CSS
+- **Scanner libraries**: requests, BeautifulSoup4 (for parsing), socket (port check)
+- **Deployment**: Vercel (with vercel.json config)
+
+## Requirements (Local Development)
+
+```bash
+pip install flask requests beautifulsoup4
