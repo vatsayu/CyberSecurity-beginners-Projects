@@ -10,19 +10,19 @@ All projects are written in **Python** and are intended **strictly for education
 
 | #  | Project Name                  | Description                                                                 | Status    | Folder / Location                          |
 |----|-------------------------------|-----------------------------------------------------------------------------|-----------|--------------------------------------------|
-| P1 | Network Scanner (Bash)        | Bash script to scan local network for active devices (ping sweep + ARP)     | Completed | `P1/Typo-Game/` or `P8-Network-Scanner-Bash/` |
+| P1 | Network Scanner (Bash)        | Bash script to scan local network for active devices (ping sweep + ARP)     | Completed | `P1/Typo-Game/` or `Network-Scanner-Bash/` |
 | P2 | Typo Game (Bash)              | Bash-based typing speed & accuracy game (useful for awareness training)     | Completed | `P2/Typo-Game/`                            |
 | P3 | File Type Identifier          | GUI tool to detect real file types using magic numbers (ignores extensions) | Completed | `File-Type-Identifier-GUI/`                |
-| P4 | Phishing Awareness Simulator  | Interactive GUI trainer to recognize phishing vs legitimate emails          | Completed | `P2-Phishing-Awareness-Simulator/`         |
-| P5 | Network Device Scanner        | (planned) Local network discovery tool                                      | Planned   | —                                          |
-| P6 | Password Policy Analyzer      | (planned) Strength & compliance checker                                     | Planned   | —                                          |
-| P7 | Secure File Share System      | (planned) Basic encrypted file transfer simulation                          | Planned   | —                                          |
+| P4 | Phishing Awareness Simulator  | Interactive GUI trainer to recognize phishing vs legitimate emails          | Completed | `-Phishing-Awareness-Simulator/`           |
+| P5 | Network Device Scanner        | (planned) Local network discovery tool                                      | Completed | —                                          |
+| P6 | Password Policy Analyzer      | (planned) Strength & compliance checker                                     | Completed | —                                          |
+| P7 | Secure File Share System      | (planned) Basic encrypted file transfer simulation                          | Completed | —                                          |
 | P8 | Intrusion Detection System (IDS) | (planned) Simple network traffic monitor                                 | Planned   | —                                          |
 | P9 | Web App Vulnerability Scanner | (planned) Basic scanner for common web vulnerabilities                      | Planned   | —                                          |
 
 ## Project Details
 
-### P1 – File Type Identifier (Hacker GUI Edition)
+### – File Type Identifier (Hacker GUI Edition)
 
 **Theory / Purpose**  
 Many malware authors disguise dangerous files (e.g. executables) with innocent-looking extensions (.jpg, .pdf, .docx). Relying only on file extensions is insecure because they can be easily changed.  
