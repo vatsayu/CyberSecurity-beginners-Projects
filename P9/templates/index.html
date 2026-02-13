@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Vulnerability Scanner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="max-w-4xl w-full p-8 rounded-lg shadow-2xl neon-border">
+        <h1 class="text-4xl font-bold text-center neon-text mb-8">Web Vulnerability Scanner</h1>
+        
+        <form method="POST" class="flex flex-col items-center">
+            <input type="text" name="url" placeholder="Enter URL to scan (e.g., http://example.com)" 
+                   class="w-full max-w-lg p-4 mb-4 bg-gray-900 border-2 border-neon rounded-lg focus:outline-none focus:border-neon-glow neon-shadow" required>
+            <button type="submit" class="px-8 py-3 bg-neon text-black font-bold rounded-lg neon-button">Scan Now</button>
+        </form>
+
+        {% if results %}
+        <div class="mt-12 w-full">
+            <h2 class="text-2xl font-bold mb-4 neon-text">Scan Results for {{ results.url }}</h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-2">XSS Check</h3>
+                <ul class="list-disc pl-6 text-gray-300">
+                    {% for item in results.xss %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-2">SQL Injection Check</h3>
+                <ul class="list-disc pl-6 text-gray-300">
+                    {% for item in results.sqli %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-2">Open Ports Check</h3>
+                {% if results.ports != "No open ports detected in basic scan." %}
+                <ul class="list-disc pl-6 text-gray-300">
+                    {% for port in results.ports %}
+                    <li>Port {{ port }} is open</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>{{ results.ports }}</p>
+                {% endif %}
+            </div>
+        </div>
+        {% elif results.error %}
+        <p class="mt-8 text-red-400 font-bold">{{ results.error }}</p>
+        {% endif %}
+
+        <p class="mt-12 text-center text-gray-500 text-sm">Ethical use only – scan your own sites!</p>
+    </div>
+</body>
+</html>
