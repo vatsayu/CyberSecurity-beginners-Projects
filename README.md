@@ -1,5 +1,3 @@
-# CyberSec_beginners_Projects
-
 # CyberSecurity Beginners Projects
 
 A collection of beginner-friendly cybersecurity projects built for learning core security concepts, tools, and awareness techniques.
@@ -8,17 +6,17 @@ All projects are written in **Python** and are intended **strictly for education
 
 ## Project List
 
-| #  | Project Name                  | Description                                                                 | Status    | Folder / Location                          |
-|----|-------------------------------|-----------------------------------------------------------------------------|-----------|--------------------------------------------|
-| P1 | Network Scanner (Bash)        | Bash script to scan local network for active devices (ping sweep + ARP)     | Completed | `P1/Typo-Game/` or `Network-Scanner-Bash/` |
-| P2 | Typo Game (Bash)              | Bash-based typing speed & accuracy game (useful for awareness training)     | Completed | `P2/Typo-Game/`                            |
-| P3 | File Type Identifier          | GUI tool to detect real file types using magic numbers (ignores extensions) | Completed | `File-Type-Identifier-GUI/`                |
-| P4 | Phishing Awareness Simulator  | Interactive GUI trainer to recognize phishing vs legitimate emails          | Completed | `-Phishing-Awareness-Simulator/`           |
-| P5 | Network Device Scanner        |   Local network discovery tool                                              | Completed | —                                          |
-| P6 | Password Policy Analyzer      |  Strength & compliance checker                                              | Completed | —                                          |
-| P7 | Secure File Share System      |  Basic encrypted file transfer simulation                                   | Completed | —                                          |
-| P8 | Intrusion Detection System (IDS) |  Simple network traffic monitor                                          | Completed | —                                          |
-| P9 | Web App Vulnerability Scanner |  Basic scanner for common web vulnerabilities                               | Completed | —                                          |
+| #  | Project Name                  | Description                                                                 | Status    |                           
+|----|-------------------------------|-----------------------------------------------------------------------------|-----------|
+| P1 | Network Scanner (Bash)        | Bash script to scan local network for active devices (ping sweep + ARP)     | Completed |  
+| P2 | Typo Game (Bash)              | Bash-based typing speed & accuracy game (useful for awareness training)     | Completed |                             
+| P3 | File Type Identifier          | GUI tool to detect real file types using magic numbers (ignores extensions) | Completed |                 
+| P4 | Phishing Awareness Simulator  | Interactive GUI trainer to recognize phishing vs legitimate emails          | Completed |           
+| P5 | Network Device Scanner        |   Local network discovery tool                                              | Completed | —                                          
+| P6 | Password Policy Analyzer      |  Strength & compliance checker                                              | Completed | —                                          
+| P7 | Secure File Share System      |  Basic encrypted file transfer simulation                                   | Completed | —                                          
+| P8 | Intrusion Detection System (IDS) |  Simple network traffic monitor                                          | Completed | —                                          
+| P9 | Web App Vulnerability Scanner |  Basic scanner for common web vulnerabilities                               | Completed | —                                          
 
 ## Project Details
 
